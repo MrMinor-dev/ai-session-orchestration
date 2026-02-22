@@ -110,9 +110,9 @@ The fix — a 3-phase protocol:
 
 ## Key Insight
 
-**The hardest continuity problem isn't technical — it's behavioral.**
+**Building the state document was the easy part. Making the agent use it consistently was not.**
 
-Building the state document was straightforward. The hard part was making the agent *actually use it consistently*. Without enforced protocols, the agent would skip the startup read "to save tokens," forget to update at shutdown "because the conversation ended abruptly," or load too much context "just to be thorough."
+Without enforced protocols, the agent would skip the startup read "to save tokens," forget to update at shutdown "because the conversation ended abruptly," or load too much context "just to be thorough."
 
 Every layer exists because a behavioral failure happened first:
 - Layer 1 exists because the agent kept re-asking questions it already had answers to.
